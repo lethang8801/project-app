@@ -95,7 +95,7 @@ export const Link = styled.a`
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
   padding: 15px;
 `;
 export const Image = styled.img`
