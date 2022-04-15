@@ -3,18 +3,24 @@ import styled from 'styled-components';
 
 export const Footer = () => {
   return (
-    <>
+    <FooterPC>
       <Terms className="terms">
-        <LinkCommon>Privacy Policy</LinkCommon>
+        <LinkCommon>Privacy Policies</LinkCommon>
         <Divider />
         <LinkCommon>Terms and Conditions</LinkCommon>
       </Terms>
       <Company className="company">
-        <p>©Kaiho Industry Co., Ltd. All Rights Reserved.</p>
+        <p style={{ margin: 0 }}>©Kaiho Industry Co., Ltd. All Rights Reserved.</p>
       </Company>
-    </>
+    </FooterPC>
   );
 };
+const FooterPC = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;
 const Terms = styled.div`
   display: flex;
   justify-content: center;
@@ -24,15 +30,9 @@ const Terms = styled.div`
   {...props}
 `;
 
-interface ILink {
-  color?: string;
-  margin?: string;
-  fontSize?: string;
-}
-const LinkCommon = styled.a<ILink>`
-  color: ${(props) => props.color};
-  margin: ${(props) => props.margin};
-  fontsize: ${(props) => props.fontSize};
+const LinkCommon = styled.a`
+  font-size: 14px;
+  color: #111111;
 `;
 const Divider = styled.div`
   width: 1px;
